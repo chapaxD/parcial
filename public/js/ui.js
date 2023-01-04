@@ -6,10 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
  * Task form
  */
 const taskForm = document.querySelector("#taskForm");
-
 taskForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const title = taskForm["title"].value;
-  const description = taskForm["description"].value;
+  // e.preventDefault();
+  const title = taskForm["shortDescription"].value;
+  const description = taskForm["type"].value;
   App.createTask(title, description);
 });

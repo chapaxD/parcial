@@ -4,8 +4,8 @@ App = {
     await App.loadWeb3();
     await App.loadAccount();
     await App.loadContract();
-    await App.render();
-    await App.renderTasks();
+    // await App.render();
+    // await App.renderTasks();
   },
   loadWeb3: async () => {
     if (window.ethereum) {
@@ -29,7 +29,7 @@ App = {
   // loadContract Conecta al contrato inteligente tasksContract.sol
   loadContract: async () => {
     try {
-      const res = await fetch("contracts/TasksContract.json");
+      const res = await fetch("http://127.0.0.1:8000/contracts/TasksContract.json ");
       const tasksContractJSON = await res.json();
       App.contracts.TasksContract = TruffleContract(tasksContractJSON);
       App.contracts.TasksContract.setProvider(App.web3Provider);
@@ -81,12 +81,16 @@ App = {
     document.querySelector("#tasksList").innerHTML = html;
   },
   createTask: async (title, description) => {
+    console.log(title);
+    console.log(description);
     try {
+      console.log(App);
       const result = await App.tasksContract.createTask(title, description, {
         from: App.account,
       });
-      console.log(result.logs[0].args);
-      window.location.reload();
+      // console.log(result.logs[0].args);
+
+      // window.location.reload();
     } catch (error) {
       console.error(error);
     }
