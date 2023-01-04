@@ -3,11 +3,12 @@
 @section('content')
     <div class="container mt-5">
         <div class="card border-dark mb-3">
-            <div class="card-header">{{ $house->id }} - {{ $house->shortDescription }}</div>
+            <div class="card-header">Inmueble: {{ $house->shortDescription }}</div>
             <img class="card-img-top" src="{{ $house->photo }}">
             <div class="card-body">
-                <h5 class="card-title">{{ $house->longDescription }}</h5>
-                <p class="card-text">{{ $house->phone }}</p>
+                <h5 class="card-title">Descripción: {{ $house->longDescription }}</h5>
+                <p class="card-text">Telefono: {{ $house->phone }}</p>
+                <p class="card-text">Precio: {{ $house->precio }}</p>
                 <p class="card-text"><small class="text-muted">Última actualización {{ date('d M Y - H:i:s', $house->updated_at->timestamp) }}</small></p>
             </div>
             @if (Auth::check())

@@ -10,8 +10,10 @@
                             <img class="card-img-top" width="300" height="300" src="{{$house->photo}}" alt="Card image cap">
                         </a>
                         <div class="card-body">
-                            <h5 class="card-title">{{ $house->shortDescription }}</h5>
-                            <p class="card-text">{{ $house->longDescription }}</p>
+                            <h5 class="card-title">Inmueble: {{ $house->shortDescription }}</h5>
+                            <p class="card-text">Descripción: {{ $house->longDescription }}</p>
+                            <p class="card-text">Precio: {{ $house->precio }}</p>
+
                             <a href="{{ route('houses-show', ['id' => $house->id]) }}" class="btn btn-primary">Ver
                                 vivienda</a>
                         </div>

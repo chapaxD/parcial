@@ -33,6 +33,11 @@
                        placeholder="Introduzca una url de imagen" value="https://www.neo-furniture.com/media/catalog/product/cache/07d5598074d0f8f1fc59b4dd2f318d55//a/c/academy_cb_1695-3d.jpg">
             </div>
             <div class="form-group mb-3">
+                <label for="precio">Precio</label>
+                <input type="text" class="form-control" id="precio" name="precio" aria-describedby="precio"
+                       placeholder="Introduzca un teléfono" value="">
+            </div>
+            <div class="form-group mb-3">
                 <label for="property">Propietario</label>
                 <select name="property_id" id="type" class="form-control">
                     @foreach ($properties as $property)

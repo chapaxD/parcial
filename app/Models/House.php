@@ -14,6 +14,7 @@ class House extends Model
         'longDescription',
         'phone',
         'photo',
+        'precio',
         'property_id',
         'update_at'
     ];

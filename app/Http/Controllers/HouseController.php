@@ -32,6 +32,7 @@ class HouseController extends Controller
         $house->longDescription = $request->longDescription;
         $house->phone = $request->phone;
         $house->photo = $request->photo;
+        $house->precio = $request->precio;
         $house->property_id = $request->property_id;
         $house->save();
 
@@ -66,6 +67,7 @@ class HouseController extends Controller
         $house->longDescription = $request->longDescription;
         $house->phone = $request->phone;
         $house->photo = $request->photo;
+        $house->precio = $request->precio;
         $house->property_id = $request->property_id;
         $house->save();
 

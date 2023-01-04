@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('longDescription');
             $table->string('phone');
             $table->string('photo');
+            $table->string('precio');
             $table->unsignedBigInteger('property_id');
             $table->foreign('property_id')
                 ->references('id')->on('properties')->onUpdate('cascade');

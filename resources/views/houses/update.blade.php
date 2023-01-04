@@ -36,6 +36,11 @@
                        placeholder="Introduzca una url de imagen" value="{{$house->photo}}">
             </div>
             <div class="form-group mb-3">
+                <label for="precio">Precio</label>
+                <input type="text" class="form-control" id="precio" name="precio" aria-describedby="precio"
+                       placeholder="Introduzca un teléfono" value="{{$house->precio}}">
+            </div>
+            <div class="form-group mb-3">
                 <label for="property">Propietario</label>
                 <select name="property_id" id="type" class="form-control">
                     @foreach ($properties as $property)
