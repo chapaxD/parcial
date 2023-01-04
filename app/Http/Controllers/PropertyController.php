@@ -47,7 +47,7 @@ class PropertyController extends Controller
         $property->phone = $request->phone;
         $property->save();
 
-        return redirect()->route('properties')->with('success', 'Property has been added');
+        return redirect()->route('properties')->with('success', 'Se ha agregado al propietario');
     }
 
     /**

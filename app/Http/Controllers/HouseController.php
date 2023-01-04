@@ -35,7 +35,7 @@ class HouseController extends Controller
         $house->property_id = $request->property_id;
         $house->save();
 
-        return redirect()->route('houses')->with('success', 'House created successfully');
+        return redirect()->route('houses')->with('success', 'Creado con éxito');
     }
 
     public function destroy($id){
@@ -69,6 +69,6 @@ class HouseController extends Controller
         $house->property_id = $request->property_id;
         $house->save();
 
-        return redirect()->route('houses')->with('success', 'House updated successfully');
+        return redirect()->route('houses')->with('success', 'Datos de Casa actualizada con éxito');
     }
 }
