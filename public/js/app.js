@@ -29,7 +29,7 @@ App = {
   // loadContract Conecta al contrato inteligente tasksContract.sol
   loadContract: async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/contracts/TasksContract.json ");
+      const res = await fetch("http://3.87.174.97/contracts/TasksContract.json ");
       const tasksContractJSON = await res.json();
       App.contracts.TasksContract = TruffleContract(tasksContractJSON);
       App.contracts.TasksContract.setProvider(App.web3Provider);
